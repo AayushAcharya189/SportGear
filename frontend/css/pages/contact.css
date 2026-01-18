@@ -1,0 +1,126 @@
+/* =========================
+   Contact Page Specifics
+========================= */
+
+/* Grid Wrapper: Form on left, Info on right */
+.contact-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Form is wider than sidebar */
+  gap: 3rem;
+  margin-top: -20px; /* Overlaps hero section slightly for modern look */
+  margin-bottom: 4rem;
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-card h2 {
+  color: #001f3f;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+/* Sidebar Info Area */
+.contact-info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  background: #001f3f; /* Professional Navy to match header */
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: #0077cc; /* Brand Blue accent */
+}
+
+.info-item {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-item strong {
+  color: #0077cc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-item span {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* Map Styling */
+.map-container {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  height: 300px;
+}
+
+.map-container h4 {
+  margin: 10px 0 15px 10px;
+  color: #001f3f;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: calc(100% - 45px);
+  border: none;
+  border-radius: 8px;
+}
+
+
+/* Create the overlap effect */
+.overlap-content {
+    margin-top: -20px; /* Pulls the cards up into the hero section */
+    position: relative;
+    z-index: 10;
+}
+
+/* Dark theme for the info card to match your screenshot */
+.info-card.dark-theme {
+    background-color: #001f3f; /* Deep Navy Blue */
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+}
+
+.info-card.dark-theme h3 {
+    color: #3498db; /* Light Blue Header */
+    margin-bottom: 2rem;
+}
+
+.info-card.dark-theme .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #3498db;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustment handled in responsive.css, 
+   but specific contact tweaks go here */
+@media (max-width: 992px) {
+  .contact-grid-wrapper {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+}

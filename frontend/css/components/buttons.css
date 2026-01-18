@@ -1,0 +1,71 @@
+/* =========================
+   Button Component
+========================= */
+
+/* 1. Base Button Style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem; /* Added standard padding */
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: none;
+  font-family: inherit;
+  gap: 8px; /* For icons if added later */
+}
+
+/* Global Hover/Active State */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* 2. Primary Action (Dark Blue to match Header) */
+.btn, .btn-submit, .add-to-cart-btn {
+  background-color: #0077cc;
+  color: white;
+}
+
+.btn:hover, .btn-submit:hover {
+  background-color: #005fa3;
+}
+
+/* 3. Success (Positive Actions) */
+.btn.success, .btn-deliver {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn.success:hover, .btn-deliver:hover {
+  background-color: #1e7e34;
+}
+
+/* 4. Danger (Destructive Actions) */
+.btn.danger, .btn--danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn.danger:hover, .btn--danger:hover {
+  background-color: #b02a37;
+}
+
+/* 5. Sizing Modifiers */
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,68 @@
+/* =========================
+   Modern CSS Reset
+========================= */
+
+/* 1. Standard Box Model & Margin/Padding Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Improve Media Defaults */
+img, 
+picture, 
+video, 
+canvas, 
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 3. Link Defaults */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 4. Remove default list styles (Great for Modular Navbars) */
+ul, 
+ol {
+  list-style: none;
+}
+
+/* 5. Inherit fonts for form elements (Crucial for consistent Buttons/Inputs) */
+input, 
+button, 
+textarea, 
+select {
+  font: inherit;
+}
+
+/* 6. Text Rendering & Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* Prevents font resizing in iOS */
+}
+
+body {
+  -webkit-font-smoothing: antialiased; /* Makes fonts look "sharper" on Mac/iOS */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 7. Remove animations for people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}

@@ -1,0 +1,125 @@
+/* =========================
+   Navigation Bar
+========================= */
+
+header {
+  background-color: #001f3f;
+  padding: 0 2rem;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+/* --- Hamburger Button Styles --- */
+.hamburger {
+  display: none; /* Hidden on Desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* --- Navigation List --- */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+nav ul li a.active {
+  background-color: #0077cc;
+  color: white;
+}
+
+/* --- Responsive Media Query (Mobile) --- */
+@media (max-width: 992px) {
+  .hamburger {
+    display: flex; /* Show Hamburger */
+  }
+
+  nav ul {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Exact height of your header */
+    left: 0;
+    width: 100%;
+    background-color: #001f3f;
+    padding: 1rem 0;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    gap: 0;
+  }
+
+  /* Toggled state via JS */
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  /* Reset Login button margin for mobile */
+  nav ul li a[href*="login.html"] {
+    margin-left: 0;
+    background-color: transparent;
+    color: #ffffff;
+  }
+}
+
+/* Hamburger Animation to 'X' */
+.hamburger.active span:nth-child(1) { transform: rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg); }

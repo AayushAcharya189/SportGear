@@ -1,0 +1,91 @@
+/* =========================
+   Global Layout Styles
+========================= */
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Modernized font stack */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f9; /* Slightly cooler grey for a premium feel */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main wrapper */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Page Header Layout --- */
+.page-header {
+  /* Using your new Dark Navy and Brand Blue for a professional gradient */
+  background: linear-gradient(135deg, #001f3f 0%, #0077cc 100%);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem; /* Increased padding for "breathing room" */
+  margin-bottom: 3rem;
+  box-shadow: inset 0 -10px 20px rgba(0,0,0,0.05);
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* --- Grid Systems (High-End Logic) --- */
+.product-grid,
+.inventory-grid,
+.inventory-list {
+  display: grid;
+  /* Auto-fit creates the "smart" responsive behavior without media queries */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem; /* Generous spacing makes it look less "cluttered" */
+  padding: 2rem 0;
+}
+
+/* --- Footer Base Layout --- */
+.footer {
+  background-color: #001f3f; /* Matches Header for brand consistency */
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: auto;
+  border-top: 4px solid #0077cc; /* Signature accent line */
+}
+
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer .socials img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.footer .socials img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Update existing gear in the Sports Gear Store inventory" />
+  <title>Update Gear | SportGear</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">SportGear</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./inventory.html">Inventory</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./profile.html">Profile</a></li>
+        <li><a href="./admin-orders.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Update Inventory</h1>
+        <p>Modify existing product details to keep the catalog accurate.</p>
+      </div>
+    </section>
+
+    <section class="container mb-2">
+      <form id="updateForm" class="auth-form">
+        <h2>Modify Gear Details</h2>
+        
+        <div class="form-group">
+          <label for="gearId">Gear ID (Required to Locate Item)</label>
+          <input type="text" id="gearId" name="gearId" placeholder="Enter the unique Gear ID" required />
+        </div>
+
+        <hr class="mb-1">
+
+        <div class="form-group">
+          <label for="name">New Gear Name</label>
+          <input type="text" id="name" name="name" placeholder="Update Gear Name">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="Camping">Camping</option>
+            <option value="Hiking">Hiking</option>
+            <option value="Kayaking">Kayaking</option>
+            <option value="Cycling">Cycling</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price ($)</label>
+          <input type="number" id="price" name="price" placeholder="0.00" required min="0" step="0.01" />
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Stock Quantity</label>
+          <input type="number" id="quantity" name="quantity" required min="0" />
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image Path</label>
+          <input type="text" id="image" name="image" placeholder="../assets/images/gear.jpg" required />
+        </div>
+
+        <button type="submit" class="btn btn--primary">Apply Changes</button>
+        <div id="updateStatus" class="status-message"></div>
+        
+        <p class="form-note">
+          <a href="./inventory.html">← Return to Inventory Dashboard</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 SportGear. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">
+          <img src="../assets/images/facebook.jpg" alt="Facebook" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">
+          <img src="../assets/images/twitter.jpg" alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">
+          <img src="../assets/images/instagram.jpg" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

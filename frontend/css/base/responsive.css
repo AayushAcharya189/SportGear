@@ -1,0 +1,134 @@
+/* =========================
+   Responsive Design
+========================= */
+
+/* 1. Large Tablets (1024px) */
+@media (max-width: 1024px) {
+  .container {
+    width: 95%; /* Give more room on smaller screens */
+  }
+}
+
+/* 2. Tablets & Mobile Prep (768px) */
+@media (max-width: 768px) {
+  /* Navigation */
+  header {
+    height: auto;
+    padding: 1rem;
+    flex-direction: column; /* Stack logo and menu */
+    gap: 1rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  nav ul li a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  /* Page Headers */
+  .page-header {
+    padding: 3rem 1.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Forms */
+  .auth-form,
+  .gear-form,
+  .delete-form {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  /* Generic Grid Fallback */
+  .about-feature,
+  .community-content,
+  .values-grid,
+  .contact-grid-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* 3. Mobile Phones (600px) */
+@media (max-width: 600px) {
+  /* Make all main buttons full-width for easier tapping */
+  .btn, 
+  .btn-submit, 
+  .add-to-cart-btn {
+    display: flex;
+    width: 100%;
+  }
+
+  .inventory-actions, 
+  .admin-actions {
+    flex-direction: column;
+  }
+
+  /* Reduce grid gaps for small screens */
+  .product-grid,
+  .inventory-grid {
+    gap: 1.25rem;
+    padding: 1rem 0;
+  }
+
+  /* 1. Force the cart footer to stack vertically */
+  .cart-total-section, 
+  .d-flex.justify-between {
+    flex-direction: column !important; 
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1rem;
+  }
+
+  /* 2. Adjust the total amount font for mobile */
+  .cart-total-amount {
+    margin-right: 0 !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* 3. Ensure the checkout button takes full width and looks clean */
+  #checkoutBtn {
+    width: 100%;
+    justify-content: center; /* Centers the text inside the full-width button */
+    margin-left: 0 !important;
+  }
+  
+  .filter-container.admin-search {
+    flex-direction: column !important; /* Stack input and button */
+    gap: 10px !important;            /* Add a gap between them */
+    padding: 10px !important;
+  }
+
+  .filter-container.admin-search #adminSearchInput {
+    border-radius: 8px !important;    /* Round all corners for mobile */
+    border-right: 2px solid #cbd5e0 !important; /* Restore the right border */
+    width: 100% !important;
+    max-width: none !important;
+    height: 50px !important;          /* Larger touch target for mobile */
+  }
+
+  .filter-container.admin-search .btn--primary {
+    width: 100% !important;           /* Full width button for thumbs */
+    border-radius: 8px !important;    /* Round all corners for mobile */
+    height: 50px !important;
+    justify-content: center !important;
+  }
+}
+
+/* 4. Small Phones (480px) */
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}

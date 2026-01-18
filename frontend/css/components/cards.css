@@ -1,0 +1,89 @@
+/* =========================
+   Card Components
+========================= */
+
+/* 1. Base Card Structure */
+.card,
+.product-card,
+.gear-card,
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 12px; /* Slightly rounder for a modern look */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Softer, high-end shadow */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border for definition */
+}
+
+/* Professional Hover Effect */
+.card:hover,
+.product-card:hover,
+.gear-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #0077cc; /* Subtle brand-color highlight on hover */
+}
+
+/* 2. Media (Images) */
+.card img,
+.product-card img,
+.gear-card img,
+.gear-image {
+  width: 100%;
+  height: 200px; /* Standardized height */
+  object-fit: contain; /* Keeps logo/gear from stretching */
+  background-color: #f8f9fa; /* Very light grey background for product shots */
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+}
+
+/* 3. Typography */
+.card h3,
+.product-card h3,
+.gear-card h3 {
+  font-size: 1.25rem;
+  color: #001f3f; /* Dark Navy to match your professional header */
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-align: left; /* Left-aligned text looks more premium than centered */
+}
+
+.card p,
+.product-card p,
+.gear-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* 4. Price & Footer Logic */
+.price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0077cc; /* Brand blue for the price */
+  margin-top: auto; /* Pushes price to the bottom */
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 5. Special Sections */
+.profile-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  border: 1px solid #eee;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}

@@ -1,0 +1,87 @@
+/* =========================
+   Badge & Status Components
+========================= */
+
+/* 1. Base Pill/Badge Styles */
+.role-badge,
+.status-pill,
+.badge--low-stock,
+.warning-tag {
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Role Badges (Profile/Admin) */
+.role-badge {
+  padding: 4px 12px;
+  border-radius: 50px; /* Fully pill-shaped */
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.admin-role {
+  background-color: #d63031; /* Strong professional red */
+}
+
+.user-role {
+  background-color: #0077cc; /* Brand blue */
+}
+
+/* 3. Status Pills (Orders/Shipping) */
+.status-pill {
+  padding: 5px 12px;
+  border-radius: 6px; /* Slightly squared for a modern technical look */
+  font-size: 0.7rem;
+  border: 1px solid transparent;
+}
+
+.status-pill--pending {
+  background-color: #fff8e1;
+  color: #b07d05;
+  border-color: #ffecb3;
+}
+
+.status-pill--shipped {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-color: #c8e6c9;
+}
+
+.status-pill--delivered {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-color: #bbdefb;
+}
+
+/* 4. Stock & Text Status (Inventory) */
+.status-ok  { color: #27ae60; font-weight: 600; }
+.status-low { color: #d35400; font-weight: 700; }
+.status-out { color: #c0392b; font-weight: 700; }
+
+/* 5. Warning Tags (Stock Alerts) */
+.badge--low-stock,
+.warning-tag {
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  margin-left: 8px;
+}
+
+/* Specific pulse for critical warnings */
+.status-out {
+  animation: subtle-pulse 2s infinite;
+}
+
+@keyframes subtle-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}

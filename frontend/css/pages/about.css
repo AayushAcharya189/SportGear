@@ -1,0 +1,143 @@
+/* =========================
+   About Page Specifics
+========================= */
+
+/* 1. Feature Section (Split Layout) */
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 5rem 0;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.section-subtitle {
+  display: block;
+  color: #0077cc;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text h2 {
+  font-size: 2.5rem;
+  color: #001f3f;
+  margin-bottom: 1.5rem;
+}
+
+/* Why Us List Styling */
+.why-us-list {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border-left: 4px solid #0077cc;
+}
+
+.why-us-list h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.why-us-list ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.why-us-list strong {
+  color: #001f3f;
+}
+
+/* 2. Values Banner (Dark Theme) */
+.values-banner {
+  background-color: #001f3f;
+  color: #ffffff;
+  padding: 5rem 0;
+  margin: 2rem 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  text-align: center;
+}
+
+.value-item h2 {
+  color: #0077cc;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.value-item p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* 3. Community Section (Reversed Layout) */
+.community-section {
+  padding: 5rem 0;
+}
+
+.community-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: row-reverse; /* Puts image on the other side */
+}
+
+.community-text {
+  flex: 1;
+}
+
+.community-text h2 {
+  font-size: 2.2rem;
+  color: #001f3f;
+  margin-bottom: 1rem;
+}
+
+/* 4. Shared Visual Elements */
+.feature-image, 
+.community-image {
+  flex: 1;
+}
+
+.rounded-img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.shadow {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.community-text .btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+.community-text p {
+  margin-bottom: 0.75rem;
+}
+
+/* 5. Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-feature, 
+  .community-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

@@ -1,0 +1,105 @@
+/* =========================
+   Form Components
+========================= */
+
+/* 1. Base Form Container */
+.auth-form,
+.gear-form,
+.delete-form {
+  background-color: #ffffff; /* Clean white background */
+  padding: 2.5rem; /* More breathing room */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Deeper, soft shadow */
+  max-width: 450px;
+  width: 100%;
+  margin: 2rem auto;
+  border: 1px solid #edf2f7;
+}
+
+/* 2. Titles & Labels */
+.auth-form h2,
+.gear-form h2,
+.delete-form h2 {
+  margin-bottom: 2rem;
+  color: #001f3f; /* Professional Dark Navy */
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.auth-form label,
+.gear-form label,
+.delete-form label,
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4a5568; /* Soft grey-black */
+  text-align: left; /* Professional left alignment */
+}
+
+/* 3. Inputs & Textareas */
+.auth-form input,
+.gear-form input,
+.delete-form input,
+.auth-form textarea,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Modern Focus State */
+.auth-form input:focus,
+.gear-form input:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: #0077cc;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.1);
+}
+
+.auth-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* 4. Notes and Feedback */
+.status-message {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.form-note {
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  color: #718096;
+  text-align: center;
+}
+
+.form-note a {
+  color: #0077cc;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.form-note a:hover {
+  text-decoration: underline;
+}
+
+/* 5. Generic spacing for profile/contact */
+.form-group {
+  margin-bottom: 20px;
+}

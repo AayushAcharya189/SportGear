@@ -1,0 +1,58 @@
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  background-color: #001f3f; /* Professional Dark Navy */
+  color: #ffffff;
+  padding: 40px 0; /* More breathing room */
+  margin-top: 60px;
+  border-top: 4px solid #0077cc; /* Signature Blue accent line */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8; /* Subtle text effect */
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+}
+
+.socials a img {
+  width: 32px; /* Standardized size */
+  height: 32px;
+  border-radius: 8px; /* Softer corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle glass background */
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.socials a img:hover {
+  transform: translateY(-5px);
+  background-color: #0077cc; /* Blue pop on hover */
+}
+
+/* Responsive tweak for footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

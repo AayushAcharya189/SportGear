@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SportGear: Admin order management dashboard." />
+  <title>Admin Orders | SportGear</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">SportGear</div>
+    <nav>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./inventory.html">Inventory</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./profile.html">Profile</a></li>
+        <li><a href="./admin-orders.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Global Order Management</h1>
+        <p>Monitor real-time sales performance and manage customer shipments.</p>
+      </div>
+    </section>
+
+    <section class="container mb-2">
+      
+      <div id="adminStats" class="admin-stats mt-2">
+        <div class="stat-card">
+          <p class="stat-label">Total Revenue</p>
+          <h2 id="totalRevenue" class="stat-value text-primary">$0.00</h2>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Orders Processed</p>
+          <h2 id="totalOrders" class="stat-value">0</h2>
+        </div>
+      </div>
+
+      <div class="filter-container admin-search">
+        <input type="text" 
+               id="adminSearchInput" 
+               placeholder="Search by Customer Name or Order ID..." />
+        <button class="btn btn--primary">Search</button>
+      </div>
+
+      <hr class="divider mb-2">
+
+      <div class="profile-header">
+          <h3>Recent Shipments</h3>
+      </div>
+      <div id="adminOrderList" class="order-list">
+        <p class="empty-message">Loading order database...</p>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 SportGear. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">
+          <img src="../assets/images/facebook.jpg" alt="Facebook" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">
+          <img src="../assets/images/twitter.jpg" alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">
+          <img src="../assets/images/instagram.jpg" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

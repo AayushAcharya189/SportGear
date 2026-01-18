@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Delete gear items from the Sports Gear Store inventory" />
+  <title>Delete Gear | SportGear</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">SportGear</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./inventory.html">Inventory</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Delete Gear Item</h1>
+        <p>Permanently remove an item from the inventory catalog.</p>
+      </div>
+    </section>
+
+    <section class="container mb-2">
+      <div class="contact-grid-wrapper"> <div class="feature-image">
+          <img src="../assets/images/deletegear.jpg" alt="Delete Gear" class="rounded-img shadow" />
+        </div>
+
+        <form id="deleteForm" class="auth-form">
+          <h2>Confirm Deletion</h2>
+          <p class="mb-1 text-muted">Please enter the unique Gear ID of the item you wish to remove. This action cannot be undone.</p>
+          
+          <div class="form-group">
+            <label for="gearId">Gear ID</label>
+            <input
+              type="text"
+              id="gearId"
+              name="gearId"
+              placeholder="e.g. GEAR-123"
+              required
+              autocomplete="off"
+            />
+          </div>
+
+          <button type="submit" class="btn danger">Permanently Delete Gear</button>
+          <div id="deleteStatus" class="status-message"></div>
+          
+          <p class="form-note">
+            <a href="./inventory.html">← Cancel and Return to Inventory</a>
+          </p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 SportGear. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">
+          <img src="../assets/images/facebook.jpg" alt="Facebook" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">
+          <img src="../assets/images/twitter.jpg" alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">
+          <img src="../assets/images/instagram.jpg" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

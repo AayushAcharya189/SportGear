@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to SportGear to access your account, manage your orders, and shop sports & outdoor gear." />
+  <title>Login | SportGear</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header with logo and navigation -->
+  <header>
+    <div class="logo">SportGear</div>
+    <nav>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./inventory.html">Inventory</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page header -->
+  <section class="page-header">
+    <h1>Login to Your Account</h1>
+    <p>Access your account to manage your orders and shopping experience.</p>
+  </section>
+
+  <!-- Login Form Section -->
+  <main>
+    <section class="form-section container">
+      <form id="loginForm" class="auth-form">
+        <h2>Login</h2>
+
+        <label for="loginEmail">Username or Email</label>
+        <input type="text" id="loginEmail" name="loginEmail" placeholder="Enter your username or email" required />
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required />
+
+        <button type="submit" class="btn">Login</button>
+
+        <!-- Message area for success or error -->
+        <p id="loginStatus" class="status-message"></p>
+
+        <p class="form-note">
+          Don't have an account? <a href="./register.html">Register here</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 SportGear. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">
+          <img src="../assets/images/facebook.jpg" alt="Facebook" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">
+          <img src="../assets/images/twitter.jpg" alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">
+          <img src="../assets/images/instagram.jpg" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

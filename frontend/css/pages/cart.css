@@ -1,0 +1,114 @@
+/* =========================
+   Shopping Cart Page
+========================= */
+
+.cart-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Cart Table/List Header */
+.cart-header-labels {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #edf2f7;
+  font-weight: 700;
+  color: #718096;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* Individual Cart Item */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #edf2f7;
+  transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+  background-color: #f8fafc; /* Very subtle highlight */
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  color: #001f3f;
+  font-size: 1.1rem;
+}
+
+.cart-item-price {
+  color: #0077cc;
+  font-weight: 600;
+}
+
+/* Actions Area */
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.remove-btn {
+  background: #fff5f5; /* Light red background */
+  color: #c53030;    /* Deep red text */
+  border: 1px solid #feb2b2;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c53030;
+  color: #ffffff;
+  border-color: #c53030;
+}
+
+/* Cart Summary / Total Area */
+.cart-total-section {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  
+  /* Changed from text-align: right to Flexbox */
+  display: flex !important;
+  justify-content: space-between !important; 
+  align-items: center !important;
+  width: 100%; /* Ensures it spans the full width of the container */
+}
+
+.cart-total-label {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-right: 10px;
+}
+
+.cart-total-amount {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #001f3f;
+  /* Ensure it doesn't take up more space than needed */
+  flex-grow: 1; 
+  text-align: left; /* Keep the price on the left */
+}
+
+/* Ensure the button stays on the right and doesn't shrink */
+#checkoutBtn {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
