@@ -346,4 +346,4 @@ This project represents practical learning beyond tutorials and focuses on produ
 
 ### 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the ***MIT License***.
