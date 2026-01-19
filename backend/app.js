@@ -13,14 +13,13 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
-// 1. ADD THIS: Serve static files from the "frontend" folder
-// This makes sure your CSS, JS, and Images load correctly
-app.use(express.static(path.join(__dirname, '../frontend')));
+// 1. Updated Static Files path
+app.use(express.static(path.join(__dirname, '..', 'frontend')));
 
-// 2. ADD THIS: Route for the home page
-// This replaces the "API is running" message with your actual site
+// 2. Updated Route for home page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    // We use path.resolve to ensure Render finds the absolute path
+    res.sendFile(path.resolve(__dirname, '..', 'frontend', 'index.html'));
 });
 
 // API Routes
