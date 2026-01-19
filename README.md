@@ -1,7 +1,7 @@
 ### 🏀 SportGear E-Commerce Store
 SportGear is a full-stack e-commerce platform designed for outdoor and sports enthusiasts. This project features a robust backend powered by Node.js and Express, with a live database connection to MongoDB Atlas.
 
-### 🚀 View Live Site
+### 🚀 [View Live Site](https://sportgear-shop.onrender.com/index.html)
 
 --------------------------------------------------------------
 
