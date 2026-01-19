@@ -13,15 +13,16 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
-// 1. Define the correct frontend path using process.cwd()
+// 1. Define the correct frontend path
 const frontendPath = path.join(process.cwd(), 'frontend');
 
-// 2. Serve static files (CSS, JS, Images)
+// 2. Serve static files from the root of frontend (for CSS, JS, etc.)
 app.use(express.static(frontendPath));
 
-// 3. Update the root route to send index.html
+// 3. Update the root route to point to the 'pages' subfolder
 app.get('/', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
+    // We add 'pages' here because that's where your index.html lives
+    res.sendFile(path.join(frontendPath, 'pages', 'index.html'));
 });
 
 // API Routes
