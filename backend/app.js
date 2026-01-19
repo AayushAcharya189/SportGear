@@ -13,15 +13,13 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
-// 1. Define the correct frontend path
+// 1. Point to the root frontend folder for static assets (CSS/JS)
 const frontendPath = path.join(process.cwd(), 'frontend');
-
-// 2. Serve static files from the root of frontend (for CSS, JS, etc.)
 app.use(express.static(frontendPath));
 
-// 3. Update the root route to point to the 'pages' subfolder
+// 2. Point specifically to the 'pages' subfolder for the HTML file
 app.get('/', (req, res) => {
-    // We add 'pages' here because that's where your index.html lives
+    // We add 'pages' here because that's where index.html lives in your project
     res.sendFile(path.join(frontendPath, 'pages', 'index.html'));
 });
 
