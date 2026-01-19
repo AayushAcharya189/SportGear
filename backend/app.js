@@ -13,14 +13,18 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
-// 1. Point to the root frontend folder for static assets (CSS/JS)
 const frontendPath = path.join(process.cwd(), 'frontend');
+
+// 1. Serve static files from the 'frontend' root (for CSS/JS/Assets)
 app.use(express.static(frontendPath));
 
-// 2. Point specifically to the 'pages' subfolder for the HTML file
+// 2. ALSO serve static files from 'frontend/pages' 
+// This allows you to visit /products.html directly!
+app.use(express.static(path.join(frontendPath, 'pages')));
+
+// 3. Keep your root route for the landing page
 app.get('/', (req, res) => {
-    // We add 'pages' here because that's where index.html lives in your project
-    res.sendFile(path.join(frontendPath, 'pages', 'index.html'));
+  res.sendFile(path.join(frontendPath, 'pages', 'index.html'));
 });
 
 // API Routes
