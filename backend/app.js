@@ -13,13 +13,15 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
-// 1. Updated Static Files path
-app.use(express.static(path.join(__dirname, '..', 'frontend')));
+// 1. Define the correct frontend path using process.cwd()
+const frontendPath = path.join(process.cwd(), 'frontend');
 
-// 2. Updated Route for home page
+// 2. Serve static files (CSS, JS, Images)
+app.use(express.static(frontendPath));
+
+// 3. Update the root route to send index.html
 app.get('/', (req, res) => {
-    // We use path.resolve to ensure Render finds the absolute path
-    res.sendFile(path.resolve(__dirname, '..', 'frontend', 'index.html'));
+    res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
 // API Routes
