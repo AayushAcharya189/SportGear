@@ -1,3 +1,8 @@
+// Check if we are running locally or on the web
+const API_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+  ? "http://localhost:5000" 
+  : "https://sportgear-shop.onrender.com";
+
 // ===================================
 // Auth & Role Setup (MUST BE FIRST)
 // ===================================
@@ -272,7 +277,7 @@ async function handleAuth(formId, url, statusId, redirectOnSuccess = null) {
 // Login logic
 handleAuth(
   "loginForm",
-  "http://localhost:5000/api/auth/login",
+  `${API_URL}/api/auth/login`,
   "loginStatus",
   "index.html"
 );
@@ -280,7 +285,7 @@ handleAuth(
 // Registration logic
 handleAuth(
   "registerForm",
-  "http://localhost:5000/api/auth/register",
+  `${API_URL}/api/auth/register`,
   "registerStatus",
   "login.html"
 );
@@ -387,13 +392,13 @@ function gearFormHandler(formId, method, urlBuilder, requireId = false, deleteOn
 // --- Initialize Handlers ---
 
 // Add Gear (add.html)
-gearFormHandler("addForm", "POST", () => "http://localhost:5000/api/gears");
+gearFormHandler("addForm", "POST", () => `${API_URL}/api/gears`);
 
 // Update Gear (update.html)
-gearFormHandler("updateForm", "PUT", id => `http://localhost:5000/api/gears/${id}`, true);
+gearFormHandler("updateForm", "PUT", id => `${API_URL}/api/gears/${id}`, true);
 
 // Delete Gear (delete.html)
-gearFormHandler("deleteForm", "DELETE", id => `http://localhost:5000/api/gears/${id}`, true, true);
+gearFormHandler("deleteForm", "DELETE", id => `${API_URL}/api/gears/${id}`, true, true);
 
 // ===========================
 // Inventory Page
@@ -412,7 +417,7 @@ let allInventory = []; // Master list to store live or dummy data for filtering
 
 if (inventoryList) {
   // 1. Fetch live gear data from the server
-  fetch("http://localhost:5000/api/gears")
+  fetch(`${API_URL}/api/gears`)
     .then(res => res.json())
     .then(res => {
       allInventory = res.data; 
@@ -530,7 +535,7 @@ if (productGallery) {
         checkoutBtn.disabled = true;
         checkoutBtn.innerText = "Processing Order...";
 
-        const response = await fetch("http://localhost:5000/api/orders/checkout", {
+        const response = await fetch(`${API_URL}/api/orders/checkout`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -639,7 +644,7 @@ if (productGallery) {
   };
 
   // --- INITIAL DATA FETCH ---
-  fetch("http://localhost:5000/api/gears")
+  fetch(`${API_URL}/api/gears`)
     .then(res => res.json())
     .then(res => {
       allProducts = res.data;
@@ -734,7 +739,7 @@ if (contactForm) {
                 submitBtn.innerText = "Sending...";
             }
 
-            const res = await fetch("http://localhost:5000/api/contact", {
+            const res = await fetch(`${API_URL}/api/contact`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(contact),
@@ -840,7 +845,7 @@ if (profileDisplay) {
         email: emailInput || user.email,
       };
       try {
-        const response = await fetch(`http://localhost:5000/api/auth/profile`, {
+        const response = await fetch(`${API_URL}/api/auth/profile`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -874,7 +879,7 @@ if (profileDisplay) {
     if (orderHistoryContainer) {
       const fetchOrders = async () => {
         try {
-          const res = await fetch("http://localhost:5000/api/orders/myorders", {
+          const res = await fetch(`${API_URL}/api/orders/myorders`, {
             headers: { "Authorization": `Bearer ${token}` }
           });
           const result = await res.json();
@@ -931,7 +936,7 @@ let allOrders = [];
 if (adminOrderList) {
     const fetchAllOrders = async () => {
         try {
-            const res = await fetch("http://localhost:5000/api/orders/all", {
+            const res = await fetch(`${API_URL}/api/orders/all`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${token}`,
@@ -1051,7 +1056,7 @@ function renderOrders(ordersToRender) {
 window.updateOrderStatus = async (orderId, newStatus) => {
     if (!confirm(`Mark order as ${newStatus}?`)) return;
     try {
-        const res = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+        const res = await fetch(`${API_URL}/api/orders/${orderId}`, {
             method: "PUT",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -1066,7 +1071,7 @@ window.updateOrderStatus = async (orderId, newStatus) => {
 window.deleteOrder = async (orderId) => {
     if (!confirm("⚠️ Permanently delete this order?")) return;
     try {
-        const res = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+        const res = await fetch(`${API_URL}/api/orders/${orderId}`, {
             method: "DELETE",
             headers: { "Authorization": `Bearer ${token}` }
         });
