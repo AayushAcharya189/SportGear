@@ -1,15 +1,11 @@
-### 🏔️ SportGear
-### Role-Based Outdoor Adventure E-Commerce Platform
+### 🏀 SportGear E-Commerce Store
+SportGear is a full-stack e-commerce platform designed for outdoor and sports enthusiasts. This project features a robust backend powered by Node.js and Express, with a live database connection to MongoDB Atlas.
 
-SportGear is a full-stack role-based e-commerce platform built for outdoor enthusiasts.
-It features a secure authentication system, strict role-based authorization, modular frontend architecture, and a scalable backend powered by RESTful APIs.
-
-The project is designed to mirror real-world production workflows, not a tutorial-style demo.
+### 🚀 View Live Site
 
 --------------------------------------------------------------
 
-### 🌄 Project Summary
-
+### ✨ Project Summary
 SportGear enables customers to explore and purchase outdoor gear while providing administrators with controlled access to inventory and order management.
 
 The system is built with a clear separation between frontend and backend and follows industry-level security practices.
@@ -21,6 +17,7 @@ This project demonstrates practical experience with:
 --- Role-Based Access Control (RBAC)
 --- Modular frontend styling
 --- MongoDB data modeling
+
 
 --------------------------------------------------------------
 
@@ -281,7 +278,7 @@ EMAIL_PASS=your_email_password
          npm start
 
 --- Server runs at:
-         http://localhost:3000
+         http://localhost:5000
 
 --------------------------------------------------------------
 
@@ -341,6 +338,10 @@ This manual process ensures controlled administrative access.
 SportGear was built to reflect real-world engineering principles, including secure authentication, role-based authorization, and maintainable frontend architecture.
 
 This project represents practical learning beyond tutorials and focuses on production-oriented development practices.
+
+--------------------------------------------------------------
+
+### 🌍 Deployment Note: The application is optimized for Linux-based cloud environments (Render). It utilizes process.cwd() for absolute path resolution to ensure reliable serving of frontend assets across different server architectures.
 
 --------------------------------------------------------------
 
