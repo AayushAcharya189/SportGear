@@ -174,6 +174,7 @@ This approach reflects modern frontend best practices.
 --------------------------------------------------------------
 
 ### 🗂️ Project Structure
+<pre>
 SportGear/
 │
 ├── frontend/
@@ -253,6 +254,8 @@ SportGear/
 ├── .env.example
 ├── package.json
 └── README.md
+</pre>
+
 --------------------------------------------------------------
 
 ### ⚙️ Installation & Setup
