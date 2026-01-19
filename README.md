@@ -66,8 +66,9 @@ This project demonstrates practical experience with:
 --- 2: Update Gear (If don't want to update name, leave as it is)
 <img width="1920" height="1200" alt="Screenshot (729)" src="https://github.com/user-attachments/assets/77a94a8f-984c-428c-b320-7c5f2ca573f1" />
 
-        --- Updated Gear (The Gear that I added and updated)
-        <img width="1920" height="1200" alt="Screenshot (730)" src="https://github.com/user-attachments/assets/b7f56ba1-a662-4314-911b-45334e6f66cb" />
+--- Updated Gear (The Gear that I added and updated)
+<img width="1920" height="1200" alt="Screenshot (730)" src="https://github.com/user-attachments/assets/892a7e3d-248e-46ed-9815-a12d4dc8051a" />
+
 
 --- 3: Delete Gear
 <img width="1920" height="1200" alt="Screenshot (733)" src="https://github.com/user-attachments/assets/ab1f6be8-76d9-43d6-8f61-44af51c7478b" />
