@@ -13,6 +13,11 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
+// --- PING ROUTE HERE 
+app.get('/ping', (req, res) => {
+  res.status(200).send('Server is alive!');
+});
+
 const frontendPath = path.join(process.cwd(), 'frontend');
 
 // 1. Serve static files from the 'frontend' root (for CSS/JS/Assets)
