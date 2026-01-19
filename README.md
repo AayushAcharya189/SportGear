@@ -205,7 +205,7 @@ SportGear/
 │   │   │   ├── orders.css
 │   │   │   └── profile.css
 │   │   │
-│   │   └── style.css   ← Global CSS entry point
+│   │   └── style.css  ← Global CSS entry point
 │   │
 │   ├── js/
 │   │   └── script.js
@@ -253,7 +253,6 @@ SportGear/
 ├── .env.example
 ├── package.json
 └── README.md
-
 --------------------------------------------------------------
 
 ### ⚙️ Installation & Setup
