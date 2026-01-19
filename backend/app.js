@@ -29,9 +29,4 @@ app.use('/api/gears', gearRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/orders', require('./routes/orderRoutes'));
 
-// Health check
-app.get('/', (req, res) => {
-  res.send('SportsGearStore API is running');
-});
-
 module.exports = app;
